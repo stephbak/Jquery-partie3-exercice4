@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Jquery partie 3</title>
+</head>
+<body>
+  <button type="button" name="size" id="size">augmenter la taille de 10px</button>
+  <button type="button" name="color" id="color"> mettre en vert</button>
+  <button type="button" name="reset" id="reset">réinitialiser les couleurs</button>
+  <button type="button" name="disappear" id="disappear">faire disparaitre</button>
+  <button type="button" name="appear" id="appear">faire apparaitre</button>
+  <div id="rectangle"></div>
+  <script type="text/javascript">
+  $(function(){
+    $('#size').click(function(){
+      if($('#rectangle').height() < 100){
+        $('#rectangle').css('height','+=10px');
+      }else{
+        $('#rectangle').css('height','10px');
+      }
+    });
+    $('#color').click(function(){
+      $('#rectangle').css('background-color', 'green');
+    });
+    $('#reset').click(function(){
+      $('#rectangle').css('background-color', 'red');
+    });
+    $('#disappear').click(function(){
+      $('#rectangle').hide();
+    });
+    $('#appear').click(function(){
+      $('#rectangle').show();
+    });
+  });
+</script>
+</body>
+</html>
